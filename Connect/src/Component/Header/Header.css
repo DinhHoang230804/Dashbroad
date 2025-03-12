@@ -1,0 +1,71 @@
+.logo {
+  width: 7%;
+}
+.navbar {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background-color: #0084b4;
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.13);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left .logo {
+  font-size: 20px;
+  margin-right: 20px;
+}
+.nav-left li:hover {
+  background-color: rgba(255, 255, 255, 0.164);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.027); /* Hiệu ứng tỏa sáng */
+  border-radius: 10px;
+}
+.nav-left .active {
+  background-color: rgba(255, 255, 255, 0.164);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.027); /* Hiệu ứng tỏa sáng */
+  border-radius: 10px;
+}
+.nav-left ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-left li {
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.nav-right {
+  padding: 10px 10px;
+  background-color: rgba(58, 53, 53, 0.212);
+  display: flex;
+  align-items: center;
+  right: 100px;
+  border-radius: 20px;
+}
+.nav-right span {
+  white-space: nowrap;
+}
+.nav-right .profile-pic img {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+}
+.unlink {
+  text-decoration: none;
+  color: white;
+}
