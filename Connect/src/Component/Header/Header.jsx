@@ -12,7 +12,7 @@ import {
 import "./Header.css";
 const Header = () => {
   const tabs = [
-    { name: "Dashboard", path: "/dashboard", icon: <FaThLarge /> },
+    { name: "Dashboard", path: "/", icon: <FaThLarge /> },
     { name: "OmniChat", path: "/chat", icon: <FaEnvelope /> },
     { name: "Đơn Hàng", icon: <FaShoppingCart /> },
     { name: "Lịch hẹn", icon: <FaCalendarAlt /> },

@@ -19,7 +19,7 @@
   background: white;
 }
 
-.select-roles-bar{
+.select-roles-bar {
   border: none !important;
   box-shadow: none !important;
 }
@@ -30,7 +30,7 @@
   gap: 10px;
 }
 
-.user-name-roles h4{
+.user-name-roles h4 {
   margin: 11px;
   padding-left: 10px;
 }
@@ -64,7 +64,7 @@
 
 .message.received {
   justify-content: flex-start;
-  gap: 8px
+  gap: 8px;
 }
 
 .message.sent {
@@ -97,12 +97,12 @@
   outline: none;
   margin: 0;
 }
-.chat-footer-input::placeholder{
+.chat-footer-input::placeholder {
   color: #1890ff;
   opacity: 1;
 }
 
-.chat-footer button{
+.chat-footer button {
   height: auto;
   border: none;
   box-shadow: none;

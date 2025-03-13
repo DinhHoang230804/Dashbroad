@@ -71,7 +71,10 @@
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
+.action-buttons button {
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 .add-button svg {
   margin-right: 8px;
 }
@@ -81,17 +84,18 @@
 .template-table {
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid #ddd; /* Viền tổng thể */
 }
 
 .template-table th {
   background-color: #00a0d1;
   color: white;
-  text-align: left;
+  white-space: nowrap;
   padding: 12px;
 }
 
 .template-table td {
-  padding: 12px;
+  padding: 13px;
   border-bottom: 1px solid #ddd;
 }
 
