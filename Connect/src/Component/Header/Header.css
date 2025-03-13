@@ -1,6 +1,7 @@
 .logo {
   width: 7%;
 }
+
 .navbar {
   display: flex;
   position: absolute;
@@ -16,24 +17,28 @@
 .nav-left {
   display: flex;
   align-items: center;
+  width: 100%; /* Đảm bảo nav-left chiếm toàn bộ chiều rộng */
 }
 
 .nav-left .logo {
   font-size: 20px;
   margin-right: 20px;
 }
+
 .nav-left li:hover {
   background-color: rgba(255, 255, 255, 0.164);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
     0 0 20px rgba(255, 255, 255, 0.027); /* Hiệu ứng tỏa sáng */
   border-radius: 10px;
 }
+
 .nav-left .active {
   background-color: rgba(255, 255, 255, 0.164);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
     0 0 20px rgba(255, 255, 255, 0.027); /* Hiệu ứng tỏa sáng */
   border-radius: 10px;
 }
+
 .nav-left ul {
   list-style: none;
   display: flex;
@@ -56,16 +61,88 @@
   right: 100px;
   border-radius: 20px;
 }
+
 .nav-right span {
   white-space: nowrap;
 }
+
 .nav-right .profile-pic img {
   width: 35px;
   height: 35px;
   background-color: white;
   border-radius: 50%;
 }
+
 .unlink {
   text-decoration: none;
   color: white;
+}
+.icon-menu {
+  display: none; /* Mặc định ẩn trên màn hình lớn */
+  cursor: pointer;
+  font-size: 24px;
+}
+/* Media Query cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Giữ bố cục hàng ngang */
+    justify-content: space-between; /* Các phần tử cách đều nhau */
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+
+  .nav-left .icon-menu {
+    display: block; /* Hiển thị icon menu */
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  .nav-left .logo {
+    width: 40px; /* Giảm kích thước logo trên mobile */
+    margin: 0 auto; /* Đưa logo vào giữa */
+    display: block;
+  }
+
+  .nav-left ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0084b4;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-left ul.active {
+    display: flex;
+  }
+
+  .nav-left li {
+    margin: 5px 0;
+    padding: 10px;
+  }
+
+  .nav-right {
+    background-color: transparent;
+    width: auto;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .nav-right .profile-pic img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
 }

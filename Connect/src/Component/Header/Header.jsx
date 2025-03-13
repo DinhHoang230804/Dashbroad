@@ -7,6 +7,7 @@ import {
   FaCalendarAlt, // Lịch Hẹn (lịch)
   FaChartBar, // Báo Cáo (đồng hồ)
   FaSlidersH,
+  FaBars,
 } from "react-icons/fa";
 import "./Header.css";
 const Header = () => {
@@ -18,18 +19,26 @@ const Header = () => {
     { name: "Báo Cáo", icon: <FaChartBar /> },
     { name: "Cài Đặt", icon: <FaSlidersH /> },
   ];
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [active, setactive] = useState();
+  // Hàm để toggle menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div>
       <div className="navbar">
         <div className="nav-left">
           <img className="logo" src="./img/logo.png" alt="" />
-          <ul>
+          <div className="icon-menu" onClick={toggleMenu}>
+            <FaBars />
+          </div>
+          <ul className={isMenuOpen ? "active" : ""}>
             {tabs.map((tab) => (
-              <Link className="unlink" to={tab.path}>
+              <Link className="unlink" to={tab.path} key={tab.name}>
+                {" "}
+                {/* <- KEY đặt ở đây */}
                 <li
-                  key={tab.name}
                   className={active === tab.name ? "active" : ""}
                   onClick={() => setactive(tab.name)}
                 >

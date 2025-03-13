@@ -1,9 +1,7 @@
 import "./App.css";
-
 import Dashbroad from "./Component/Dashbroad/Dashbroad";
 import Header from "./Component/Header/Header";
-import Chat from "./Component/chat/Chat";
-import CustomerInfo from "./Component/customerInfo/CustomerInfo";
+import Chat from "./Component/Omnichat/chat/Chat";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
