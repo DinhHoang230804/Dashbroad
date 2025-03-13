@@ -4,7 +4,7 @@
 
 .navbar {
   display: flex;
-  position: absolute;
+
   justify-content: space-between;
   align-items: center;
   z-index: 10;
@@ -84,65 +84,266 @@
 }
 /* Media Query cho màn hình nhỏ */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: row; /* Giữ bố cục hàng ngang */
-    justify-content: space-between; /* Các phần tử cách đều nhau */
-    align-items: center;
-    width: 100%;
-    padding: 10px 20px;
+  .content {
     position: relative;
+    top: 50px;
+  }
+  .navbar {
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    justify-content: center;
   }
 
-  .nav-left {
-    display: flex;
-    align-items: center;
-    width: auto;
-  }
-
-  .nav-left .icon-menu {
-    display: block; /* Hiển thị icon menu */
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 15px;
-  }
-
-  .nav-left .logo {
-    width: 40px; /* Giảm kích thước logo trên mobile */
-    margin: 0 auto; /* Đưa logo vào giữa */
-    display: block;
+  .logo {
+    width: 20%;
+    max-width: 80px;
+    margin: 0 auto; /* Căn giữa logo */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .nav-left ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #0084b4;
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: 0;
-    padding: 10px 0;
-    text-align: center;
+    flex-direction: column;
+    background: white; /* Màu nền trắng */
+    color: #0084b4; /* Chữ màu xanh */
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.3s ease;
   }
 
   .nav-left ul.active {
-    display: flex;
+    width: 70%;
+    background: white; /* Màu nền trắng */
+    color: #0084b4; /* Chữ màu xanh */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   }
 
   .nav-left li {
-    margin: 5px 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 15px;
+  }
+  .nav-left ul.active li {
+    color: #0084b4; /* Đổi màu chữ */
+  }
+
+  .nav-left .active {
+    background-color: rgba(0, 132, 180, 0.1); /* Hiệu ứng hover */
+  }
+  .nav-left ul.active li:hover {
+    background-color: #d3e4fd;
+    color: #0084b4;
+  }
+  .nav-right {
+    position: absolute;
+    right: 10px;
+    background: rgba(58, 53, 53, 0.3);
+    padding: 5px 10px;
+  }
+
+  .nav-right span {
+    display: none; /* Ẩn chữ "Xin chào Hoàng" */
+  }
+
+  .icon-menu {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 20px;
+  }
+
+  .dashboard {
+    padding: 10px;
+    top: 60px;
+    margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 10px;
   }
 
+  .tabs {
+    margin-bottom: 10px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    padding-bottom: 5px;
+  }
+
+  .filter-search {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-box input {
+    width: calc(100% - 50px);
+  }
+
+  .filter-search select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bot-container {
+    flex-direction: column;
+  }
+
+  .add-bot,
+  .bot-card {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+
+  .bot-card {
+    position: relative;
+    padding: 15px;
+  }
+
+  .bot-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .status {
+    left: auto;
+    top: auto;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .menu-icon {
+    position: absolute;
+
+    right: 10px;
+    bottom: 20px;
+    visibility: visible;
+    opacity: 1;
+  }
+  .dropdown-menu1 {
+    position: relative;
+    z-index: 100px;
+  }
+  .dropdown-menu2 {
+    width: 200px;
+    right: 0;
+  }
+
+  .dropdown-menu2 {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+}
+
+/* Phần @media cho màn hình nhỏ hơn */
+@media (max-width: 576px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-menu {
+    left: 10px;
+    top: 13px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    width: 30px;
+  }
+
   .nav-right {
-    background-color: transparent;
-    width: auto;
-    margin-top: 0;
-    padding: 0;
+    right: 10px;
+    top: 10px;
+    padding: 3px 8px;
   }
 
   .nav-right .profile-pic img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .dashboard {
+    top: 50px;
+    padding: 10px;
+    background-color: #f5f5f5;
+  }
+
+  .bot-card {
+    margin-bottom: 10px;
+  }
+
+  .tabs span {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .tabs .active {
+    padding: 5px 8px;
+  }
+
+  .bot-card h3 {
+    font-size: 14px;
+    bottom: 5px;
+  }
+
+  .bot-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .last-updated {
+    font-size: 12px;
+  }
+
+  .status {
+    font-size: 10px;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .dropdown-menu1,
+  .dropdown-menu2 {
+    width: 180px;
+    font-size: 12px;
+  }
+
+  .dropdown-menu1 li,
+  .dropdown-menu2 li {
+    padding: 8px;
   }
 }

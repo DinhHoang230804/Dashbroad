@@ -10,10 +10,7 @@ ul {
 .logo {
   width: 7%;
 }
-.dashboard {
-  position: relative;
-  top: 80px;
-}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;

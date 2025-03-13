@@ -26,7 +26,25 @@ export default function Dashbroad() {
   const [active2, setactive2] = useState();
   const [showMenuConnect, setShowMenuConect] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const menuItems = [
+    { icon: <FaPencilAlt />, label: "Đổi tên page" },
+    { icon: <FaPlay />, label: "Kết nối Page" },
+    { icon: <FaPowerOff />, label: "Ngắt kết nối" },
+    { icon: <FaSyncAlt />, label: "Làm mới kết nối" },
+    { icon: <FaExchangeAlt />, label: "Chuyển shop" },
+    { icon: <FaBell />, label: "Thông báo" },
+    { icon: <FaUser />, label: "Khách hàng" },
+  ];
 
+  const menuItems2 = [
+    { icon: <FaFacebookMessenger />, label: "LiveChat" },
+    { icon: <FaRobot />, label: "ChatBot" },
+    { icon: <FaTelegramPlane />, label: "Chiến dịch" },
+    { icon: <FaCalendarAlt />, label: "Sequence" },
+    { icon: <FaKey />, label: "Từ khóa" },
+    { icon: <FaGamepad />, label: "Game" },
+    { icon: <FaCog />, label: "Cài đặt Page" },
+  ];
   const [pages] = useState([
     {
       id: 1,
@@ -130,52 +148,15 @@ export default function Dashbroad() {
                 {/* Menu dropdown */}
                 {showMenu && (
                   <div className={`dropdown-menu2 ${showMenu ? "active" : ""}`}>
-                    <ul>
-                      <li>
-                        <FaPencilAlt /> Đổi tên page
-                      </li>
-                      <li>
-                        <FaPlay /> Kết nối Page
-                      </li>
-                      <li>
-                        <FaPowerOff /> Ngắt kết nối
-                      </li>
-                      <li>
-                        <FaSyncAlt /> Làm mới kết nối
-                      </li>
-                      <li>
-                        <FaExchangeAlt /> Chuyển shop
-                      </li>
-                      <li>
-                        <FaBell /> Thông báo
-                      </li>
-                      <li>
-                        <FaUser /> Khách hàng
-                      </li>
-                    </ul>
-                    <ul>
-                      <li>
-                        <FaFacebookMessenger /> LiveChat
-                      </li>
-                      <li>
-                        <FaRobot /> ChatBot
-                      </li>
-                      <li>
-                        <FaTelegramPlane /> Chiến dịch
-                      </li>
-                      <li>
-                        <FaCalendarAlt /> Sequence
-                      </li>
-                      <li>
-                        <FaKey /> Từ khóa
-                      </li>
-                      <li>
-                        <FaGamepad /> Game
-                      </li>
-                      <li>
-                        <FaCog /> Cài đặt Page
-                      </li>
-                    </ul>
+                    {[menuItems, menuItems2].map((group, index) => (
+                      <ul key={index}>
+                        {group.map((item, idx) => (
+                          <li key={idx}>
+                            {item.icon} {item.label}
+                          </li>
+                        ))}
+                      </ul>
+                    ))}
                   </div>
                 )}
               </div>

@@ -1,0 +1,47 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contentt {
+  position: relative;
+  top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  margin: 0 20px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.315); /* Bóng mờ xung quanh */
+}
+
+.nav-menu {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 95%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 2px 8px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-menu a:hover {
+  color: rgb(55, 150, 194);
+}
+
+.nav-menu .active {
+  border: 1px solid rgb(55, 150, 194);
+  color: rgb(55, 150, 194);
+  border-radius: 10px;
+}

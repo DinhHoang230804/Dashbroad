@@ -1,16 +1,27 @@
 import React from "react";
-import { UserOutlined, MailOutlined, PhoneOutlined, EnvironmentOutlined, PlusCircleOutlined, TagOutlined } from "@ant-design/icons";
+import {
+  UserOutlined,
+  MailOutlined,
+  PhoneOutlined,
+  EnvironmentOutlined,
+  PlusCircleOutlined,
+  TagOutlined,
+} from "@ant-design/icons";
 import "./CustomerInfo.css";
 
 const CustomerInfo = () => {
   return (
     <div className="user-info">
-    <div className="header-title">
-      <h2 className="title">Quản Lý Thông Tin</h2>
-    </div>
+      <div className="header-title">
+        <h2 className="title">Quản Lý Thông Tin</h2>
+      </div>
 
       <div className="avatar-container">
-        <img src="https://i.pravatar.cc/40" alt="User Avatar" className="avatar" />
+        <img
+          src="https://i.pravatar.cc/40"
+          alt="User Avatar"
+          className="avatar"
+        />
         <h3 className="user-name">Lê Thảo Ly</h3>
         <p className="user-id">ID Facebook: 30273409</p>
       </div>
@@ -39,10 +50,14 @@ const CustomerInfo = () => {
       </button>
 
       <div className="tags">
-        <p className="tag-title"><TagOutlined /> Tag khách hàng</p>
+        <p className="tag-title">
+          <TagOutlined /> Tag khách hàng
+        </p>
         <div className="tag-buttons">
           <button className="completed">Hoàn tất</button>
-          <button className="add-tag">Thêm <PlusCircleOutlined /></button>
+          <button className="add-tag">
+            Thêm <PlusCircleOutlined />
+          </button>
         </div>
       </div>
     </div>

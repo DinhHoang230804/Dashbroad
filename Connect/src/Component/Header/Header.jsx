@@ -17,7 +17,7 @@ const Header = () => {
     { name: "Đơn Hàng", icon: <FaShoppingCart /> },
     { name: "Lịch hẹn", icon: <FaCalendarAlt /> },
     { name: "Báo Cáo", icon: <FaChartBar /> },
-    { name: "Cài Đặt", icon: <FaSlidersH /> },
+    { name: "Cài Đặt", path: "/setting", icon: <FaSlidersH /> },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [active, setactive] = useState();

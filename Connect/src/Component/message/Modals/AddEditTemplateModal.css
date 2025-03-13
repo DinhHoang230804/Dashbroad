@@ -1,0 +1,51 @@
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.form-control.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.radio-label {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.radio-label input {
+  margin-right: 5px;
+}
+
+.upload-image {
+  padding: 10px;
+  border: 1px dashed var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-icon {
+  color: var(--primary-color);
+  font-size: 24px;
+}

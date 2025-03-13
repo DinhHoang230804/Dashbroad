@@ -1,6 +1,4 @@
 .chat-window {
-  position: relative;
-  top: 70px;
   display: flex;
   flex-direction: column;
   width: 100%;
