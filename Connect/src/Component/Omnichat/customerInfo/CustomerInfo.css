@@ -1,14 +1,15 @@
 .user-info {
   background: white;
-  border-radius: 16px;
+  border-radius: 10px;
   padding: 20px;
-  width: 350px;
+  height: 79vh;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
 }
 
 .title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -27,7 +28,7 @@
 }
 
 .user-name {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 4px;
 }
@@ -79,6 +80,7 @@
 .tag-title {
   font-size: 14px;
   color: #1890ff;
+  padding-bottom: 10px;
 }
 
 .tag-buttons {

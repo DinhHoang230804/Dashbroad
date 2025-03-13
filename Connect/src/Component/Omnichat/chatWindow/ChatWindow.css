@@ -1,8 +1,8 @@
 .chat-window {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 84vh;
+  width: 70%;
+  height: 85vh;
   background: white;
   border-radius: 10px;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
@@ -13,13 +13,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  padding: 12px;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid #ddd;
   background: white;
 }
 
-.select-roles-bar {
+.select-roles-bar{
   border: none !important;
   box-shadow: none !important;
 }
@@ -27,30 +27,31 @@
 .user-chat {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.user-name-roles h4 {
-  margin: 10px;
+.user-name-roles h4{
+  margin: 11px;
+  padding-left: 10px;
 }
 
 .avatar-chat {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
 .actions button {
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
 }
 
 /* Vùng tin nhắn */
 .chat-body {
   flex-grow: 1;
-  padding: 10px;
+  padding: 15px;
   overflow-y: auto;
   background-color: #ddd;
 }
@@ -58,12 +59,12 @@
 .message {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .message.received {
   justify-content: flex-start;
-  gap: 6px;
+  gap: 8px
 }
 
 .message.sent {
@@ -72,36 +73,36 @@
 
 .message-content {
   background: #e6f7ff;
-  padding: 8px;
+  padding: 10px;
   border-radius: 12px;
-  max-width: 55%;
+  max-width: 60%;
 }
 
 /* Thanh nhập tin */
 .chat-footer {
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 10px;
   border-top: 1px solid #ddd;
   background: white;
   border-radius: 0 0 10px 10px;
-  gap: 8px;
+  gap: 10px;
 }
 
 .chat-footer-input {
   flex-grow: 1;
-  padding: 6px;
+  padding: 8px;
   border: 2px solid #1890ff;
   border-radius: 20px;
   outline: none;
   margin: 0;
 }
-.chat-footer-input::placeholder {
+.chat-footer-input::placeholder{
   color: #1890ff;
   opacity: 1;
 }
 
-.chat-footer button {
+.chat-footer button{
   height: auto;
   border: none;
   box-shadow: none;
@@ -116,5 +117,5 @@
   border: none;
   border-radius: 100%;
   cursor: pointer;
-  padding: 8px 6px;
+  padding: 10px 8px 10px 10px;
 }
