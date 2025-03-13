@@ -2,12 +2,18 @@
   display: flex;
   overflow: hidden;
 }
-
 .content-chat {
-  flex: 1;
-  padding: 20px;
-  background-color: #fff;
-  margin-left: 50px;
+  padding-top: 10px;
   display: flex;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
   gap: 10px;
+}
+.chat-list {
+  flex: 2;
+  width: auto;
+}
+.customer-info {
+  width: 300px;
 }

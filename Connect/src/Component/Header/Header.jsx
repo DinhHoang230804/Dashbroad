@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import {
   FaThLarge, // Dashboard (lưới)
   FaEnvelope, // OmniChat (tin nhắn)
@@ -12,7 +12,7 @@ import {
 import "./Header.css";
 const Header = () => {
   const tabs = [
-    { name: "Dashboard", path: "/", icon: <FaThLarge /> },
+    { name: "Dashboard", path: "/dashboard", icon: <FaThLarge /> },
     { name: "OmniChat", path: "/chat", icon: <FaEnvelope /> },
     { name: "Đơn Hàng", icon: <FaShoppingCart /> },
     { name: "Lịch hẹn", icon: <FaCalendarAlt /> },
@@ -26,7 +26,7 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div>
+    <>
       <div className="navbar">
         <div className="nav-left">
           <img className="logo" src="./img/logo.png" alt="" />
@@ -56,8 +56,11 @@ const Header = () => {
             Xin chào <b>Hoàng</b>{" "}
           </span>
         </div>
+        <main className="dashboard-content">
+          <Outlet />
+        </main>
       </div>
-    </div>
+    </>
   );
 };
 
