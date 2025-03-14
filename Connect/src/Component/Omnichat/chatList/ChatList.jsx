@@ -12,7 +12,6 @@ export default function ChatList() {
   ];
 
   const [selectedChat, setSelectedChat] = useState(null);
-  const [hoveredChatId, setHoveredChatId] = useState(null);
 
   useEffect(() => {
     if (chatData.length > 0) {
@@ -32,10 +31,8 @@ export default function ChatList() {
           {chatData.map((chat) => (
             <div
               key={chat.id}
-              className={`chat-item ${hoveredChatId === chat.id ? "hovered" : ""}`}
+              className={`chat-item ${selectedChat?.id === chat.id ? "active" : ""}`}
               onClick={() => setSelectedChat(chat)}
-              onMouseEnter={() => setHoveredChatId(chat.id)}
-              onMouseLeave={() => setHoveredChatId(null)}
             >
               <div className="chat-avatar">{chat.name[0]}</div>
               <div className="chat-info">

@@ -63,7 +63,13 @@
 }
 
 .chat-item:hover {
-  background: #e9ecef;
+  background: #4cacd3;
+}
+
+.chat-item.active {
+  background: #4cacd3;
+  border-left: 3px solid #007bff;
+  color: #ffffff;
 }
 
 .chat-avatar {
